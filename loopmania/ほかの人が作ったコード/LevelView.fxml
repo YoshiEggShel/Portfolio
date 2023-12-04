@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<!-- TODO = modify and expand the range of menus available from the menu menu, and develop game modes you can select when starting a new game -->
+<!-- vertically stacked label and button -->
+
+<AnchorPane prefHeight="480.0" prefWidth="380.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="480.0" fitWidth="380.0" layoutY="0" pickOnBounds="true">
+         <image>
+            <Image url="@../../images/grass.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="51.0" layoutY="76.0" prefHeight="83.0" prefWidth="281.0" text="Choose Mode" textFill="#220909">
+         <font>
+            <Font name="Agency FB Bold" size="63.0" />
+         </font></Label>
+      <Button fx:id="StandardMode" layoutX="140.0" layoutY="201.0" mnemonicParsing="false" onAction="#switchToStandard" onMouseEntered="#enterStandard" onMouseExited="#exitStandard" prefHeight="25.0" prefWidth="118.0" text="Standard Mode" />
+      <Button fx:id="SurvivalMode" layoutX="140.0" layoutY="242.0" mnemonicParsing="false" onAction="#switchToSurvival" onMouseEntered="#enterSurvival" onMouseExited="#exitSurvival" prefHeight="25.0" prefWidth="118.0" text="Survival Mode" />
+      <Button fx:id="BerserkerMode" layoutX="140.0" layoutY="281.0" mnemonicParsing="false" onAction="#switchToBerserker" onMouseEntered="#enterBerserker" onMouseExited="#exitBerserker" prefHeight="25.0" prefWidth="118.0" text="Berserker Mode" />
+      <Button fx:id="ConfusingMode" layoutX="140.0" layoutY="321.0" mnemonicParsing="false" onAction="#switchToConfusing" onMouseEntered="#enterConfusing" onMouseExited="#exitConfusing" prefHeight="25.0" prefWidth="118.0" text="Confusing Mode" />
+      <TextArea fx:id="standardText" layoutX="131.0" layoutY="364.0" prefHeight="25.0" prefWidth="135.0" text="No distinguishing effects" visible="false">
+         <font>
+            <Font name="Agency FB" size="14.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="survivalText" layoutX="118.0" layoutY="364.0" prefHeight="67.0" prefWidth="162.0" text="Only one health potion can be &#10;purchased each time you shop &#10;at the Hero's Castle" visible="false">
+         <font>
+            <Font name="Agency FB" size="14.0" />
+         </font>
+      </TextArea>
+            <TextArea fx:id="berserkerText" layoutX="108.0" layoutY="364.0" prefHeight="67.0" prefWidth="188.0" text="No more than one piece of protective &#10;gear can be purchased each time &#10;you shop at the Hero's Castle" visible="false">
+         <font>
+            <Font name="Agency FB" size="14.0" />
+         </font>
+      </TextArea>
+            <TextArea fx:id="confusingText" layoutX="124.0" layoutY="364.0" prefHeight="102.0" prefWidth="155.0" text="Rare items look the same as&#10;the original item, but have &#10;both their original behaviour&#10;as well as the behavious of &#10;another random rare item" visible="false">
+         <font>
+            <Font name="Agency FB" size="14.0" />
+         </font>
+      </TextArea>
+   </children>
+</AnchorPane>
